@@ -1,0 +1,6 @@
+div.container
+  div(ng-include="'components/navbar/navbar.html'")
+  h1 Accounts
+
+  ul(ng-repeat="account in accounts")
+    li {{ account.name }}
