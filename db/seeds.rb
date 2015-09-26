@@ -5,9 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Account.create([
+accounts = Account.create([
   { name: 'General Savings' },
   { name: 'Financial Aid' },
   { name: 'Travel' },
   { name: 'Emergency Fund' },
+])
+
+Transaction.create([
+  { name: 'Applebees', account: accounts.first },
+  { name: 'Transfer to Vanguard', account: accounts[1] },
+  { name: 'Rent', account: accounts[2] },
+  { name: 'House Payment',account: accounts[3] },
 ])
